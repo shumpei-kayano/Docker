@@ -11,3 +11,11 @@ docker compose up -d
 | MARIADB_PASSWORD      | データベースのパスワード   | 
 
 [DockerHub:mariadb](https://hub.docker.com/_/mariadb)
+
+### コンテナの中に入る方法
+```
+# コンテナの中に入る
+docker compose exec /bin/bash
+# データベースへログインする
+mariadb -u testuser -D testdb -p
+```
